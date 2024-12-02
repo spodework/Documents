@@ -1,0 +1,39 @@
+V48 PRESTANDA - TESTRESULTAT OCH OPTIMERING
+
+------------------------
+
+Initiala test
+
+Sort 0.132s -> Table Scan 0.021s
+Sort 0.136s -> Table Scan 0.023s
+Sort 0.125s -> Table Scan 0.020s
+Sort 0.118s -> Table Scan 0.019s
+
+------------------------
+
+Med 'id' som Primary Key
+
+Sort 0.117s -> Clustered Index Scan 0.018s
+Sort 0.120s -> Clustered Index Scan 0.018s
+Sort 0.124s -> Clustered Index Scan 0.019s
+Sort 0.116s -> Clustered Index Scan 0.018s
+
+------------------------
+
+Med Indexes Id ASC, Lum ASC
+
+Sort 0.110s -> Index Scan (NonClustered) 0.010s
+Sort 0.123s -> Index Scan (NonClustered) 0.012s
+Sort 0.119s -> Index Scan (NonClustered) 0.010s
+Sort 0.112s -> Index Scan (NonClustered) 0.010s
+
+------------------------
+
+Med ALLT: Primary Key & Indexes Id ASC, Lum ASC
+
+Sort 0.105s -> Index Scan (NonClustered) 0.010s
+Sort 0.115s -> Index Scan (NonClustered) 0.011s
+Sort 0.108s -> Index Scan (NonClustered) 0.010s
+Sort 0.110s -> Index Scan (NonClustered) 0.010s
+
+------------------------
